@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# install as root
+
+apt-get install -y libmail-imapclient-perl # Mail::IMAPClient
+apt-get install -y libdigest-md5-file-perl # Digest::MD5
+apt-get install -y libterm-readkey-perl    # Term::ReadKey
+apt-get install -y libio-socket-ssl-perl   # IO::Socket::SSL
+apt-get install -y libfile-spec-perl       # File::Spec
+apt-get install -y libdigest-hmac-perl     # Digest::HMAC_MD5 Digest::HMAC_SHA1
+
+apt-get install -y git
+
+git clone https://github.com/imapsync/imapsync.git
+
+cd imapsync
+
+make
+
+make install
